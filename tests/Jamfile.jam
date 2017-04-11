@@ -1,0 +1,7 @@
+import path
+
+exe SOS.Test :
+     [ path.glob-tree $(SELF)/SOS.Test : *.cpp ] gtest :
+     <link>static <include>$(SELF) ;  
+
+lib gtest : : <name>gtest ;
